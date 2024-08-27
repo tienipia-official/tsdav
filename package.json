@@ -1,6 +1,6 @@
 {
-  "name": "tsdav",
-  "version": "2.1.1",
+  "name": "@tienipia-official/tsdav",
+  "version": "2.1.2-SNAPSHOT",
   "description": "WebDAV, CALDAV, and CARDDAV client for Nodejs and the Browser",
   "keywords": [
     "dav",
@@ -20,9 +20,9 @@
     "typescript"
   ],
   "homepage": "https://tsdav.vercel.app/",
-  "repository": "https://github.com/natelindev/tsdav",
+  "repository": "https://github.com/tienipia-official/tsdav",
   "license": "MIT",
-  "author": "linlilulll@gmail.com",
+  "author": "tienipia@gmail.com",
   "main": "dist/tsdav.cjs.js",
   "module": "dist/tsdav.esm.js",
   "types": "dist/tsdav.d.ts",
@@ -30,6 +30,9 @@
     "dist",
     "package.json"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "yarn -s clean && rollup -c rollup.config.mjs && copyfiles package.json LICENSE README.md ./dist && rimraf ./dist/ts",
     "clean": "rimraf dist*",
